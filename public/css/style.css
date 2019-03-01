@@ -1,0 +1,145 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+/* CUSTOM BY EIMAN*/
+.logo-img {
+    max-height: 64px!important;
+    padding: 15px 0!important;
+}
+
+#mainrow { display: flex; }
+
+h5 {
+  padding-bottom: 5px;
+}
+
+
+/*CUSTOM BY DESRY*/
+#header-hr {
+  width: 20%;
+  height: 10%;
+  overflow: visible;
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+}
+
+
+#header-hr:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
+
+
+/*.directories_img {
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+
+
+.directories_img:hover {
+  border-radius: 0;
+  cursor: pointer;
+}*/
+
+/*.directories_img {
+  transform: translate(-50%, -50%);
+  filter: grayscale(100%);
+  transition: 0.2s ease-in;
+}
+
+.directories_img:hover {
+  filter: grayscale(0%);
+}*/
+/*
+#names_titles {
+  margin_top: -20px;
+}
+*/
+.directories_img {
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.directories_img:hover {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+#names_titles {
+  margin-top: -90px;
+}
+
+
+.title {
+  font-size: 14px;
+  margin-top: -20px;
+  font-style: italic;
+}
+
+
