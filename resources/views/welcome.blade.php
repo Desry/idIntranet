@@ -3,6 +3,13 @@
 <div class="container">
     <div class="section">
         <div class="row">
+            <div id="calendardiv">
+                <div id='calendar'></div>
+            </div>
+        </div>
+        
+
+        <div class="row">
             <div class="col s12 m12">
                 <div class="carousel carousel-slider center">
                     <div class="carousel-item red white-text" href="#one!">

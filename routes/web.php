@@ -17,21 +17,12 @@ Route::get('/', function () {
 
 Route::get('/newsandevents', 'NewsAndEventsController@index');
 
-Route::get('/company', function () {
-    $params['activenavbar'] = 'company';
-    return view('company', $params);
-});
 
 Route::get('/directory', function () {
     $params['activenavbar'] = 'directory';
     return view('directories', $params);
 });
 
-
-Route::post('/login/custom', [
-	'uses' => 'LoginController@login',
-	'as' => 'login.custom'
-]);
 
 Auth::routes();
 

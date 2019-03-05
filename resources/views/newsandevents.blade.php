@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-<style>
+<!-- <style>
    /* body {
         padding: 0;
         font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
@@ -15,13 +15,18 @@
         margin: 40px 10px;
     }
 </style>
-
+ -->
 @section('content')
 
-    <div id="calendardiv">
+
+    <div id='announcements-container'>
+        <h5 class="center-align">Announcements</h5>
+    </div>
+
+    <!-- <div id="calendardiv">
         <div id='calendar'>
         </div>
-    </div>
+    </div> -->
 @endsection
 
 <!-- dynamic getting of events -->
