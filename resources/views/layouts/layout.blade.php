@@ -67,8 +67,7 @@
                 center: 'title',
                 right: 'month, agendaWeek, agendaDay, listMonth'
             },
-            
-            defaultDate: '2019-02-03',
+            //theme: true,
             navLinks: true, //can click day/week names to navigate views
             businessHours: true,
             showNonCurrentDates: false,

@@ -2,6 +2,7 @@
 @section('content')
 <div class="container">
     <div class="section">
+        
         <div class="row">
             <div id="calendardiv">
                 <div id='calendar'></div>
@@ -76,7 +77,63 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="col s12 m6">
+                <div class="card green darken-4">
+                    <div class="card-content white-text">
+                        <span class="card-title">Files</span>
+                        <ul class="collection grey-text text-darken-4">
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle">people</i>
+                                <span class="title">Professional Services</span>
+                                <p>File</p>
+                                <a href="#!" class="secondary-content"><i class="material-icons">file_download</i></a>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle blue">build</i>
+                                <span class="title">Labs</span>
+                                <p>File</p>
+                                <a href="#!" class="secondary-content"><i class="material-icons">file_download</i></a>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle">face</i>
+                                <span class="title">Customer Success</span>
+                                <p>File</p>
+                                <a href="#!" class="secondary-content"><i class="material-icons">file_download</i></a>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle">attach_money</i>
+                                <span class="title">Sales/Marketing</span>
+                                <p>File</p>
+                                <a href="#!" class="secondary-content"><i class="material-icons">file_download</i></a>
+                            </li>
+                        </ul>
+                        <div class="card-action">
+                            <a href="/resources" style="color: white">See all Files</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <div class="col s12 m6">
+                <div class="card green darken-4">
+                    <div class="card-content white-text">
+                        <span class="card-title">Files</span>
+                        <div class="collection">
+                            <a href="#!" class="collection-item">File 1</a>
+                            <a href="#!" class="collection-item">File 2</a>
+                            <a href="#!" class="collection-item">File 3</a>
+                            <a href="#!" class="collection-item">File 4</a>
+                            <a href="#!" class="collection-item">File 5</a>
+                            <a href="#!" class="collection-item">File 6</a>
+                            <a href="#!" class="collection-item">File 7</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="col s12 m6">
                 <div class="card green darken-4">
                     <div class="card-content white-text">
                         <span class="card-title">Files</span>
@@ -118,7 +175,7 @@
                         <a href="/newsandevents" style="color: white">See full calendar</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
            <!--  <div class="col s12 m6">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">

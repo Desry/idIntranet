@@ -21,11 +21,8 @@
     <title>InfiniteDATA Intranet</title>
 </head>
 <body>
-    @include('layouts.admin-navbar')
     
-    <div id="container">
-       @yield('content')
-    </div>
+    @yield('content')
     
 
 <script type="text/javascript" src="js/jquery2-1-1.js"></script>

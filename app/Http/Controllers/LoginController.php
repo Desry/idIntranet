@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+/*use Illuminate\Support\Facades\Auth;
+*/
 
 class LoginController extends Controller
 {
@@ -28,4 +30,14 @@ class LoginController extends Controller
 
             return redirect()->back();
     }
+
+    /*public function authenticate(Request $request) {
+        $credentials = $request->only('email', 'passwowrd');
+
+        if (Auth::attempt($credentials)) {
+            return redirect()->intended('dashboard');
+        }
+
+    }*/
 }
+

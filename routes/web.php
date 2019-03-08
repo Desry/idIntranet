@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/newsandevents', 'NewsAndEventsController@index');
+Route::get('/announcements', 'AnnouncementsController@index');
 
 
 Route::get('/directory', function () {
@@ -26,22 +26,23 @@ Route::get('/directory', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 
 Route::post('/login/custom', [
 	'uses' => 'LoginController@login',
 	'as' => 'login.custom'
-
 ]);
 
 Route::group(['middleware' => 'auth'], function() {
-	Route::get('/welcome', function() {
-		return view('welcome');
-	})->name('welcome');
+	Route::get('/home', function() {
+		return view('home');
+	})->name('home');
 
 	Route::get('/dashboard', function() {
-		return view('dashboard');
+		return view('admin-dashboard');
 	})->name('dashboard');
 });
+
+
+Route::get('/resources', 'FilesController@index');
 
 

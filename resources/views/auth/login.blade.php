@@ -10,6 +10,15 @@
     </div>
    
 </div>
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    @foreach($errors->all() as $error)
+                        <ul>
+                            <li>{{ $error }}</li>
+                        </ul>
+                    @endforeach
+                </div>
+            @endif
 <div class="valign-wrapper row">
   <div class="col card s10 pull-s1 m6 pull-m3 l4 pull-l4">
     <form method="POST" action="{{ route('login.custom') }}" role="form">
