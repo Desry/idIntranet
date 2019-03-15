@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Calendar;
 use Illuminate\Http\Request;
 
-class CalendarsController extends Controller
+class EventsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,8 @@ class CalendarsController extends Controller
      */
     public function index()
     {
-        $calendars = Calendar::all();
-        return view('newsandevents', compact('calendars'));
+        $events = Event::all();
+        return view('newsandevents', compact('events'));        
     }
 
     /**
@@ -36,8 +35,8 @@ class CalendarsController extends Controller
      */
     public function store(Request $request)
     {
-        Calendar::create($request->all());
-        return redirect()->route('newsandevents');
+        Event::create($request->all());
+        return redirect()->route('newsandevents');    
     }
 
     /**

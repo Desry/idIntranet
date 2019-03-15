@@ -18,6 +18,7 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
 
+    <!-- Full Calendar CSS files -->
     <link href='css/fullcalendar.min.css' rel='stylesheet' />
     <link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
     

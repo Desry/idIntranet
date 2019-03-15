@@ -93,34 +93,6 @@ h5 {
 }
 
 
-/*.directories_img {
-  border-radius: 50%;
-  transition: all 0.3s ease-out;
-}
-
-
-.directories_img:hover {
-  border-radius: 0;
-  cursor: pointer;
-}*/
-
-/*.directories_img {
-  transform: translate(-50%, -50%);
-  filter: grayscale(100%);
-  transition: 0.2s ease-in;
-}
-
-.directories_img:hover {
-  filter: grayscale(0%);
-}*/
-/*
-#names_titles {
-  margin_top: -20px;
-}
-*/
-
-
-
 .directories_img {
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
@@ -152,6 +124,40 @@ h5 {
 
 }
 
+.sidenav {
+  background: black;
+}
+
 #id_logo {
   padding: 20px 20px;
+}
+
+.sidenav li a {
+  color: white;
+}
+
+.sidenav li a:hover {
+  background: white;
+  color: black;
+}
+
+
+.sidenav li > a > i, .sidenav li > a > [class^="mdi-"], .sidenav li > a li > a > [class*="mdi-"], .sidenav li > a > i.material-icons {
+  color: white;
+}
+
+.sidenav li > a:hover > i {
+  color: black;
+} 
+
+
+.announcements-content {
+  display: flex;
+  justify-content: center;
+}
+
+
+.card-medium {
+  width: 400px;
+  margin: 50px 20px;
 }

@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="css/materialize-social.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
 
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+
+
 
     <link href='css/fullcalendar.min.css' rel='stylesheet' />
     <link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
@@ -19,6 +27,9 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>InfiniteDATA Intranet</title>
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 </head>
 <body>
     
@@ -57,3 +68,6 @@
 
 </body>
 </html>
+
+
+

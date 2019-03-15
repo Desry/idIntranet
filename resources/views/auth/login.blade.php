@@ -1,8 +1,15 @@
 @extends('layouts.admin-layout')
 
 @section('content')
+
+
+
 <div class="container col s8">
-    <br><br>
+    <div class="row">
+         <div class="col s2 right">
+            <img class="responsive-img right" id="id_logo" src="images/infinitedata_logo.jpg">
+        </div>
+    </div>
     <div class="row">
         <div class="card-panel light-blue darken-4">
             <span class="24px white-text">Login | Administrator</span>

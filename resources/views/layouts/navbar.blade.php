@@ -1,8 +1,11 @@
 <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
+    <li><a href="#!">General</a></li>
+    <li><a href="#!">Professional Services</a></li>
     <!-- <li class="divider"></li> -->
-    <li><a href="#!">three</a></li>
+    <li><a href="#!">Labs</a></li>
+    <li><a href="#!">Customer Success</a></li>
+    <li><a href="#!">Sales</a></li>
+
 </ul>
 <div class="navbar-fixed">
     <nav class="white" role="navigation">
@@ -18,7 +21,7 @@
     </nav>
 </div>
 <ul class="sidenav" id="mobile-demo">
-    <li><a href="/newsandevents">Announcements</a></li>
-    <li><a href="/directory">Directory</a></li>
-    <li><a href="#!">Resources</a></li>
+    <li><a href="/announcements"><i class="material-icons">announcement</i>Announcements</a>
+    <li><a href="/directory"><i class="material-icons">people</i>Directory</a></li>
+    <li><a href="#!"><i class="material-icons">insert_drive_file</i>Resources</a></li>
 </ul>

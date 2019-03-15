@@ -1,25 +1,5 @@
 @extends('layouts.admin-layout')
 @section('content')
-<!-- <div class="container">
-    <div class="row justify-content-center">
-        <br><br>
-        <div class="row">
-            <div class="card-panel light-blue darken-4">
-                <span class="white-text">Dashboard | Administrator</span>
-            </div>
-
-            <div class="card-panel grey darken-4">
-                @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                @endif
-
-                <span class="black-text">You are logged in!</span>
-            </div>
-        </div>
-    </div>
-</div> -->
 
 <div class="row admin-main">
     <div class="col s3">
@@ -35,22 +15,26 @@
                 </div>
             </li>
             <li>
-                <a href="#!" class="admin-menu white-text"><i class="material-icons white-text">announcement</i>Announcements</a>
+                <a href="#!" class="admin-menu"><i class="admin-icons material-icons">person</i>Profile</a>
             </li>
             <li>
-                <a href="#!" class="admin-menu white-text"><i class="material-icons white-text">event</i>Events</a>
+                <a href="#!" class="admin-menu"><i class="admin-icons material-icons">announcement</i>Announcements</a>
             </li>
             <li>
-                <a href="#!" class="admin-menu white-text"><i class="material-icons white-text">insert_drive_file</i>Files</a>
+                <a href="#!" class="admin-menu"><i class="admin-icons material-icons">event</i>Events</a>
             </li>
+            <li>
+                <a href="#!" class="admin-menu"><i class="admin-icons material-icons">insert_drive_file</i>Files</a>
+            </li>
+
             <li><div class="divider"></div></li>
 
             <li>
-                <a class="white-text" href="{{ route('logout') }}"
+                <a class="admin-menu" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
-                    <i class="material-icons white-text">exit_to_app</i>
+                    <i class="admin-icons material-icons">exit_to_app</i>
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
@@ -62,20 +46,19 @@
 
     <div class="col s9">
         <div class="row">
-            <div class="col s2 offset-s10">
+            <div class="col s2 right">
                 <img class="responsive-img right" id="id_logo" src="images/infinitedata_logo.jpg">
+
             </div>
         </div>
-
-        <div class="row">
-        </div>
         
+        <div class="row">
+          <h6>Admin Content</h6>
+
+        </div>
     </div>
 </div>
 </div>
-
-
-
 
 
 @endsection
