@@ -24,14 +24,14 @@ Route::get('/directory', function () {
 });
 
 
-Auth::routes();
+//disable user registration
+Auth::routes(['register' => false]);
 
-
-Route::post('/login/custom', [
+/*Route::post('/login/custom', [
 	'uses' => 'LoginController@login',
 	'as' => 'login.custom'
 ]);
-\
+*/
 Route::group(['middleware' => 'auth'], function() {
 	Route::get('/home', function() {
 		return view('home');
@@ -46,3 +46,11 @@ Route::group(['middleware' => 'auth'], function() {
 Route::get('/resources', 'FilesController@index');
 
 
+Route::resource('/events', 'EventsController');
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
