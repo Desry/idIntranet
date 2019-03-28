@@ -70,6 +70,7 @@ h5 {
 
 
 /*CUSTOM BY DESRY*/
+
 #header-hr {
   width: 20%;
   height: 10%;
@@ -153,8 +154,10 @@ h5 {
 
 .announcements-content {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
 
 
 .card-medium {

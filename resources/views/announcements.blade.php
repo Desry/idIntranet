@@ -9,7 +9,7 @@
     </div>
 
     <div class="container announcements-content">
-        <div class="card hoverable medium card-medium">
+        <div class="item card hoverable medium card-medium">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator posts-image" src="images/posts/manila_office.jpg">
             </div>
