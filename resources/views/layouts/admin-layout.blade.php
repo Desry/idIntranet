@@ -23,6 +23,7 @@
     <link href="css/fullcalendar.min.css" rel="stylesheet"/>
     <link href="css/fullcalendar.print.min.css" rel="stylesheet" media="print" />
     
+<<<<<<< HEAD
 
     <script src="js/moment.min.js"></script>
     <script src="js/jquery2-1-1.js"></script>
@@ -31,6 +32,19 @@
 
     <script src='js/app2.js'></script> -->
 
+=======
+
+    <script src="js/moment.min.js"></script>
+    <script src="js/jquery2-1-1.js"></script>
+    <script src="js/fullcalendar.min.js"></script>
+
+    <!--     
+    <script src='js/moment.min.js'></script>
+    <script src='js/jquery2-1-1.js'></script>
+    <script src='js/fullcalendar.min.js'></script>
+    <script src='js/app2.js'></script> -->
+
+>>>>>>> c701d1bbacda6c6342d47c47e704aad4f329ed8e
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>InfiniteDATA Intranet</title>
