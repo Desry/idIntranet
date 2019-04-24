@@ -2,6 +2,7 @@
 
 @section('content')
 
+    
 
     <div id='announcements-header'>
         <h5 class="center-align">Announcements</h5>
@@ -42,14 +43,9 @@
 
     </div>
 
-    <!-- <div id="calendardiv">
-        <div id='calendar'>
-        </div>
-    </div> -->
 
 
 @include('layouts.footer')
 
 @endsection
 
-<!-- dynamic getting of events -->

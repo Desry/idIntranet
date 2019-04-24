@@ -1,4 +1,4 @@
-(function($){
+/*(function($){
   $(function(){
 
     $('.sidenav').sidenav();
@@ -10,4 +10,4 @@
 
   $(document).ready(function () {
         $('.modal').modal();
-    });
+    });*/

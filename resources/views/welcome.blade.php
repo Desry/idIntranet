@@ -211,7 +211,6 @@
  -->
 
 
-
 @include('layouts.footer')
 
 

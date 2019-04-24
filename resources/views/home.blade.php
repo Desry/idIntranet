@@ -7,18 +7,18 @@
             <li>
                 <div class="user-view">
                     <div class="background">
-                        <img src="images/wroclaw_parallax.jpg">
+                        <img src="{{ URL::asset('images/wroclaw_parallax.jpg') }}">
                     </div>
-                    <a href="#user"><img src="images/user.jpg" class="circle responsive-img"></a>
+                    <a href="#user"><img src="{{ URL::asset('images/user.jpg') }}" class="circle responsive-img"></a>
                     <a href="#name"><span class="white-text name">Administrator</span></a>
                     <a href="#email"><span class="white-text email">admin@gmail.com</span></a>
                 </div>
             </li>
             <li>
-                <a href="#!" class="admin-menu"><i class="admin-icons material-icons">person</i>Profile</a>
+                <a href="{{ route('home') }}" class="admin-menu"><i class="admin-icons material-icons">person</i>Profile</a>
             </li>
             <li>
-                <a href="#!" class="admin-menu"><i class="admin-icons material-icons">announcement</i>Announcements</a>
+                <a href="{{ route('posts.index') }}" class="admin-menu"><i class="admin-icons material-icons">announcement</i>Announcements</a>
             </li>
             <li>
                 <a href="{{ route('events.index') }}" class="admin-menu"><i class="admin-icons material-icons">event</i>Events</a>
@@ -47,11 +47,10 @@
     <div class="col s9">
         <div class="row">
             <div class="col s2 right">
-                <img class="responsive-img right" id="id_logo" src="images/infinitedata_logo.jpg">
-
+                <img class="responsive-img right" id="id_logo" src="{{ URL::asset('images/infinitedata_logo.jpg') }}">
             </div>
         </div>
-        
+
         <div class="row">
           <h6>Admin Content</h6>
 

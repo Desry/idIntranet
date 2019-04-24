@@ -2,9 +2,9 @@
     <li>
         <div class="user-view">
             <div class="background">
-                <img src="images/wroclaw_parallax.jpg">
+                <img src="{{ URL::asset('images/wroclaw_parallax.jpg') }}">
             </div>
-            <a href="#user"><img src="images/user.jpg" class="circle responsive-img"></a>
+            <a href="#user"><img src="{{ URL::asset('images/user.jpg') }}" class="circle responsive-img"></a>
             <a href="#name"><span class="white-text name">Administrator</span></a>
             <a href="#email"><span class="white-text email">admin@gmail.com</span></a>
         </div>
@@ -13,7 +13,7 @@
         <a href="#!" class="admin-menu"><i class="admin-icons material-icons">person</i>Profile</a>
     </li>
     <li>
-        <a href="#!" class="admin-menu"><i class="admin-icons material-icons">announcement</i>Announcements</a>
+        <a href="{{ route('posts.index') }}" class="admin-menu"><i class="admin-icons material-icons">announcement</i>Announcements</a>
     </li>
     <li>
         <a href="{{ route('events.index')}}" class="admin-menu"><i class="admin-icons material-icons">event</i>Events</a>

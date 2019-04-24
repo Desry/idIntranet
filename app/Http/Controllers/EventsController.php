@@ -15,7 +15,7 @@ class EventsController extends Controller
     public function index()
     {
         $events = Event::all();
-        return view('events.index', compact('events'));     
+        return view('adminPages.events.index', compact('events'));
     }
 
     /**
@@ -25,7 +25,7 @@ class EventsController extends Controller
      */
     public function create()
     {
-        return view('events.create');
+        return view('adminPages.events.create');
     }
 
     /**
@@ -36,8 +36,21 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-        Event::create($request->all());
-        return redirect()->route('events.index');    
+        $request->validate([
+            'event_name',
+            'description',
+            'event_date'
+        ]);
+
+        $event = new Event([
+            'event_name' => $request->get('event_name'),
+            'description' => $request->get('description'),
+            'event_date' => $request->get('event_date'),
+        ]);
+
+        $event->save();
+
+        return redirect('/events')->with('success', 'Event created successfully');
     }
 
     /**
@@ -59,7 +72,9 @@ class EventsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $event = Event::find($id);
+        return view('adminPages.events.edit', compact('event'));
+    
     }
 
     /**
@@ -71,7 +86,24 @@ class EventsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $request->validate([
+            'event_name',
+            'description',
+            'event_date'
+        ]);
+
+
+        $event = Event::find($id);
+        $event->event_name = $request->get('event_name');
+        $event->description = $request->get('description');
+        $event->event_date = $request->get('event_date');
+
+
+        $event->save();
+
+        return redirect('/events')->with('success', 'Event updated successfully');
+    
     }
 
     /**
@@ -82,6 +114,9 @@ class EventsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $event = Event::find($id);
+        $event->delete();
+    
+        return redirect('/events')->with('success', 'Event deleted successfully');
     }
 }

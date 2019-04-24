@@ -6,7 +6,7 @@
     <h5 class="center-align">Meet the Team</h5>
     <hr id="header-hr">
     <div class="container">
-    <!-- <blockquote class="gray">InfiniteDATA team combines decades of Data Warehousing (DW) experiences acquired on projects delivered for large, respective enterprises like: Procter&Gamble, Gillette, Nestle, Nokia, TDC Denmark (Sunrise), DB Schenker, Ericsson, Telenor Norway, Polkomtel, SABMiller (Komapania,Piwowarska), Pepsico.</blockquote> -->
+
     <ul class="collapsible popout" data-collapsible="popout">
         <li>
             <div class="collapsible-header"><i class="material-icons right">add</i>Executives

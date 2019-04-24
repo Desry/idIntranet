@@ -32,14 +32,19 @@ Route::group(['middleware' => 'auth'], function() {
 	Route::get('/home', function() {
 		return view('home');
 	})->name('home');
-
-	Route::get('/dashboard', function() {
-		return view('admin-dashboard');
-	})->name('dashboard');
 });
 
 
-Route::get('/resources', 'FilesController@index');
+//restrict Admin pages to administrator
+/*Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function() {
+	Route::match(['get', 'post'], '/events', 'HomeController@admin');
+});*/
 
 
-Route::resource('/events', 'EventsController');
+
+
+Route::get('/resources', 'FilesController@index')->middleware('auth');
+
+Route::resource('/posts', 'PostsController')->middleware('auth');
+
+Route::resource('/events', 'EventsController')->middleware('auth');

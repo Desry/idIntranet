@@ -8665,8 +8665,8 @@ input[type=range]::-ms-thumb {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 0;
 }
 
@@ -8783,7 +8783,7 @@ input[type=range]::-ms-thumb {
 }
 
 .datepicker-table td.is-today {
-  color: #26a69a;
+  color: red;
 }
 
 .datepicker-table td.is-selected {
@@ -8809,7 +8809,7 @@ input[type=range]::-ms-thumb {
 }
 
 .datepicker-day-button:focus {
-  background-color: rgba(43, 161, 150, 0.25);
+  background-color: rgba(12, 13, 15, 0.25);
 }
 
 /* Footer */
@@ -8823,15 +8823,15 @@ input[type=range]::-ms-thumb {
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .datepicker-cancel,
 .datepicker-clear,
 .datepicker-today,
 .datepicker-done {
-  color: #26a69a;
+  color: #1e2126;
   padding: 0 1rem;
 }
 
@@ -8896,7 +8896,7 @@ input[type=range]::-ms-thumb {
   -webkit-flex: 1 auto;
       -ms-flex: 1 auto;
           flex: 1 auto;
-  background-color: #26a69a;
+  background-color: #1e2126;
   padding: 10px;
   font-weight: 300;
 }
@@ -8985,9 +8985,11 @@ input[type=range]::-ms-thumb {
   font-size: 15px;
 }
 
+
 .timepicker-tick.active,
 .timepicker-tick:hover {
-  background-color: rgba(38, 166, 154, 0.25);
+  color: white;
+  background-color: rgba(12, 13, 15, 0.25);
 }
 
 .timepicker-dial {
@@ -9017,7 +9019,7 @@ input[type=range]::-ms-thumb {
 }
 
 .timepicker-canvas line {
-  stroke: #26a69a;
+  stroke: #1e2126;
   stroke-width: 4;
   stroke-linecap: round;
 }
@@ -9028,12 +9030,12 @@ input[type=range]::-ms-thumb {
 
 .timepicker-canvas-bearing {
   stroke: none;
-  fill: #26a69a;
+  fill: #1e2126;
 }
 
 .timepicker-canvas-bg {
   stroke: none;
-  fill: #26a69a;
+  fill: #1e2126;
 }
 
 /* Footer */
@@ -9055,7 +9057,7 @@ input[type=range]::-ms-thumb {
 }
 
 .timepicker-close {
-  color: #26a69a;
+  color: #1e2126;
 }
 
 .timepicker-clear,

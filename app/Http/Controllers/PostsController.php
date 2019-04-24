@@ -15,7 +15,7 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('posts.index', compact('posts'));
+        return view('adminPages.posts.index', compact('posts'));
     }
 
     /**
@@ -25,7 +25,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        return view('adminPages.posts.create');
     }
 
     /**
@@ -36,7 +36,19 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title',
+            'content'
+        ]);
+
+        $post = new Post([
+            'title' => $request->get('title'),
+            'content' => $request->get('content'),
+        ]);
+
+        $post->save();
+
+        return redirect('/posts')->with('success', 'Post created successfully');
     }
 
     /**
@@ -58,7 +70,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('adminPages.posts.edit', compact('post'));
+    
     }
 
     /**
@@ -70,7 +84,22 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $request->validate([
+            'title',
+            'content'
+        ]);
+
+
+        $post = Post::find($id);
+        $post->title = $request->get('title');
+        $post->content = $request->get('content');
+
+
+        $post->save();
+
+        return redirect('/posts')->with('success', 'Post updated successfully');
+    
     }
 
     /**
@@ -81,6 +110,9 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+    
+        return redirect('/posts')->with('success', 'Post deleted successfully');
     }
 }

@@ -164,3 +164,16 @@ h5 {
   width: 400px;
   margin: 50px 20px;
 }
+
+.closon {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    cursor: pointer;
+    background-color: #FFF
+  }
+
+  
+.fc-event-container {
+    position: relative;
+  }
