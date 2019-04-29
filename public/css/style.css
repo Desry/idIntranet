@@ -177,3 +177,10 @@ h5 {
 .fc-event-container {
     position: relative;
   }
+
+
+.timestamp {
+  font-size: 12px;
+  font-weight: lighter;
+  font-style: italic;
+}

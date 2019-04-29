@@ -67,7 +67,6 @@
     $(document).ready(function(){
         $('.timepicker').timepicker();
     });
-
        
     $(document).ready(function(){
         $('#calendarAdmin').fullCalendar({
@@ -111,7 +110,8 @@
                @foreach($events as $event)
                {
                     title: '{{ $event->event_name }}',
-                    start: '{{ $event->event_date }}'
+                    start: '{{ $event->event_date }}',
+                    url : '{{ route('events.edit', $event->id) }}'
                },
                @endforeach
             ]
@@ -122,6 +122,3 @@
         
 </body>
 </html>
-
-
-

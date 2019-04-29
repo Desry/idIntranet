@@ -72,9 +72,7 @@
             //theme: true,
             navLinks: true, //can click day/week names to navigate views
             businessHours: true,
-            showNonCurrentDates: false,
-            editable: true,
-            
+            showNonCurrentDates: false,            
 
             eventClick: function(eventObj) {
 

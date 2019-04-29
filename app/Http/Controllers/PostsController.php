@@ -37,16 +37,37 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title',
-            'content'
+            'title' => 'required',
+            'content' => 'required',
+            'img_path' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048' 
         ]);
 
-        $post = new Post([
+        $image = $request->file('img_path');
+        $new_img_name = rand() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('uploads'), $new_img_name);
+
+        $form_data = array(
+            'title' => $request->title,
+            'content' => $request->content,
+            'img_path' => $new_img_name
+        );        
+
+        Post::create($form_data);
+
+        /*$post = new Post([
             'title' => $request->get('title'),
             'content' => $request->get('content'),
+        
+            //image upload
+            if ($request->hasFile('img_path')){
+                $filename = $request->img_path->getClientOriginalName();
+
+                $request->img_path->storeAs('public/uploads', $filename);
+            }
+
         ]);
 
-        $post->save();
+        $post->save();*/
 
         return redirect('/posts')->with('success', 'Post created successfully');
     }
@@ -86,13 +107,17 @@ class PostsController extends Controller
     {
 
         $request->validate([
-            'title',
-            'content'
+            'title' => 'required',
+            'content' => 'required'        
         ]);
 
 
         $post = Post::find($id);
         $post->title = $request->get('title');
+
+
+        // get textarea value????????
+        
         $post->content = $request->get('content');
 
 

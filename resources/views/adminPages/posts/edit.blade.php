@@ -24,7 +24,7 @@
 			<div class="card-title">Update Post</div>
 			<div class="card-content">
 				@if($errors->any())
-				<div class="red-text">
+				<div class="msg green-text">
 					@foreach($errors->all() as $error)
 						<ul>
 							<li>{{ $error }}</li>
@@ -40,8 +40,8 @@
           				<label for="title">Title</label>
         			</div>
         			<div class="input-field col s6">
-                        <textarea id="content" class="materialize-textarea validate" name="content" value="{{ $post->content }}"></textarea>
-                        <label for="content">Textarea</label>
+                        <textarea id="content" class="materialize-textarea validate" type="text" class="validate" name="content" value="{{ $post->content }}"></textarea>
+                        <label for="content">Content</label>
         			</div>
         			<button type="submit" class="btn-floating waves-effect waves-light btn blue"><i class="material-icons">send</i>Submit</button>
         		</form>
@@ -50,14 +50,15 @@
     </div>
 </div>
 
+<!-- timeOut for messages -->
+<!-- 
 <script>
     $(document).ready(function(){
         setTimeout(function(){
             $('div.upper').remove();
         }, 3000);
     });
-</script>
-
+</script> -->
 
 @endsection
 

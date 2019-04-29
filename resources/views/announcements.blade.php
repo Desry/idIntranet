@@ -8,43 +8,29 @@
         <h5 class="center-align">Announcements</h5>
         <hr id="header-hr">
     </div>
+    
 
-    <div class="container announcements-content">
-        <div class="item card hoverable medium card-medium">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator posts-image" src="images/posts/manila_office.jpg">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">InfiniteDATA expands in PH, opens its office in Makati<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">InfiniteDATA opens its office in Manila<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
-        </div>
-
-
-         <div class="card hoverable medium card-medium">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator posts-image" src="images/posts/manila_office.jpg">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">InfiniteDATA expands in PH, opens its office in Makati<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">InfiniteDATA opens its office in Manila<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    @foreach ($posts as $post)
+        <div class="container">
+            <div class="row">
+                <div class="card hoverable card-large">
+                    <div class="card-image">
+                        <!-- <img src="images/sample-1.jpg"> -->
+                        <img src="{{ URL::to('/') }}/uploads/{{ $post->img_path }}">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title blue-text">{{ $post->title }}</h4>
+                        <p class="timestamp grey-text">{{ $post->updated_at }}</p>
+                        <p>{{str_limit($post->content, 100, '...')}}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
-            
-
-
-    </div>
-
-
-
+    @endforeach
+    <br><br>
 @include('layouts.footer')
 
 @endsection

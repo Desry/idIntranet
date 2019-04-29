@@ -70,30 +70,6 @@
                 <div id="calendarAdmin"></div>
             </div>
         </div>
-
-
-        <div class="modal" id="updateEvent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <h4>Update Event</h4>
-
-                            Title:
-                            <br />
-                            <input type="text" class="form-control" name="event_name" id="event_name">
-
-                            Event Date:
-                            <br />
-                            <input type="text" class="form-control" name="event_date" id="event_date">
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <input type="button" class="btn btn-primary" id="eventUpdate" value="Save">
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 

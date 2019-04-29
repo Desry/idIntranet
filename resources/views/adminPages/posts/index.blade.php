@@ -44,7 +44,7 @@
          -->
         <div class="upper">
             @if(session()->get('success'))
-                <div class="red-text">
+                <div class="green-text">
                     {{ session()->get('success') }}
                 </div>
             @endif
@@ -52,7 +52,7 @@
 
         <div class="container">
             <div class="row">
-             <a href="{{ route('posts.create') }}" class="waves-effect waves-light btn blue"><i class="material-icons">add</i>New Post</a>
+             <a href="{{ route('posts.create') }}" class="waves-effect waves-light btn blue">New Post</a>
         
             <table class="responsive-table highlight">
                 <thead>
@@ -83,7 +83,7 @@
 </div>
 
 <script>
-    $(".delete").on("submit", function(){
+    $(".delete").on('submit', function(){
         return confirm("Delete post?");
     });
 
@@ -94,8 +94,5 @@
 
     });
 </script>
-       
 
-
-
-@endsection
+@endsection/

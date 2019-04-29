@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::get('/announcements', 'AnnouncementsController@index');
 
+Route::get('/posts', 'PostsController@store')->name('uploadImage'); //route to upload an image to a post
 
 Route::get('/directory', function () {
     $params['activenavbar'] = 'directory';
@@ -39,8 +40,6 @@ Route::group(['middleware' => 'auth'], function() {
 /*Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function() {
 	Route::match(['get', 'post'], '/events', 'HomeController@admin');
 });*/
-
-
 
 
 Route::get('/resources', 'FilesController@index')->middleware('auth');

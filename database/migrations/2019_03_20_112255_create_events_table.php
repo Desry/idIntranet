@@ -17,7 +17,11 @@ class CreateEventsTable extends Migration
             $table->bigIncrements('id');
             $table->string('event_name');
             $table->text('description')->nullable();
-            $table->date('event_date');
+            $table->date('event_sdate');
+            $table->date('event_edate')->nullable();
+            $table->time('event_stime');
+            $table->time('event_etime');
+            $table->string('event_color');
             $table->timestamps();
         });
     }

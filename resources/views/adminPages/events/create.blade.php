@@ -19,7 +19,7 @@
                         <div class="card-content">
                             
                             @if($errors->any())
-                                <div class="red-text">
+                                <div class="green-text">
                                     @foreach($errors->all() as $error)
                                         <ul>
                                             <li>{{ $error }}</li>
