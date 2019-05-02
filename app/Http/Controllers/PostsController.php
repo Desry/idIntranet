@@ -105,23 +105,74 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
+      /*  $image_name = $request->hidden_image;
+        $img_path = $request->file('img_path');
+
+        if($img_path != '') {
+            $request->validate([
+                'title' => 'require',
+                'content' => 'require',
+                'img_path' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048' 
+            ]);
+            $image_name = rand() . '.' . $image->getClientOriginalExtension();
+            $img_path->move(public_path('uploads'), $image_name);
+        } else {
+            $request->validate([
+                'title' => 'required',
+                'content' => 'required'
+            ]);
+        }
+
+
+        $form_data = array(
+            'title' => $request->title,
+            'content' => $request->content,
+            'img_path' => $image_name
+        );
+
+
+        Post::whereId($id)->update($form_data);*/
+
+
+        $image_name = $request->hidden_image;
+        $img_path = $request->file('img_path');
+
+
+        if ($img_path != '') {
+            $request->validate([
+                'title' => 'required',
+                'content' => 'required',
+                'img_path' => 'images|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            ]);
+            $image_name = rand() . '.' . $image->getClientOriginalExtension();
+            $img_path->move(public_path('uploads'), $image_name);
+        } else {
+            $request->validat([
+                'title' => 'required',
+                'content' => 'required'
+
+            ]);
+
+        }
+
 
         $request->validate([
             'title' => 'required',
-            'content' => 'required'        
+            'content' => 'required',
+            'img_path' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
 
-        $post = Post::find($id);
+        //fetch data option 2
+
+      /*  $post = Post::find($id);
         $post->title = $request->get('title');
+    
+        $post->content = $request->input('content');
+        $post->img_path = $request->file('img_path');
 
 
-        // get textarea value????????
-        
-        $post->content = $request->get('content');
-
-
-        $post->save();
+        $post->save();*/
 
         return redirect('/posts')->with('success', 'Post updated successfully');
     

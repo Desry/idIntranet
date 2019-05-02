@@ -36,7 +36,24 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
+        
         $request->validate([
+            'event_name',
+            'description',
+            'event_date'
+        ]);
+
+        $form_data = array(
+            'event_name' => $request->event_name,
+            'description' => $request->description,
+            'event_date' => $request->event_date
+        );
+
+        Event::create($form_data);
+
+        return redirect('/events')->with('success', 'Event created successfully');
+
+       /* $request->validate([
             'event_name',
             'description',
             'event_date'
@@ -50,7 +67,7 @@ class EventsController extends Controller
 
         $event->save();
 
-        return redirect('/events')->with('success', 'Event created successfully');
+        return redirect('/events')->with('success', 'Event created successfully');*/
     }
 
     /**

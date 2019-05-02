@@ -15,8 +15,7 @@
             <div class="row">
                 <div class="card hoverable card-large">
                     <div class="card-image">
-                        <!-- <img src="images/sample-1.jpg"> -->
-                        <img src="{{ URL::to('/') }}/uploads/{{ $post->img_path }}">
+                        <img class="materialboxed" src="{{ URL::to('/') }}/uploads/{{ $post->img_path }}" data-caption="{{ $post->title }}">
                     </div>
                     <div class="card-content">
                         <h4 class="card-title blue-text">{{ $post->title }}</h4>
@@ -24,13 +23,27 @@
                         <p>{{str_limit($post->content, 100, '...')}}</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">Read More</a>
+                        <a class="modal-trigger" href="#details">Read More</a>
+                    </div>
+
+                    <div id="details" class="modal">
+                        <div class="modal-content">
+                            <h4>{{ $post->title }}</h4>
+                            <img src="{{ URL::to('/') }}/uploads/{{ $post->img_path }}" width="100" height="100">
+                            <p>{{ $post->content }}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     @endforeach
     <br><br>
+
+
+   
 @include('layouts.footer')
 
 @endsection

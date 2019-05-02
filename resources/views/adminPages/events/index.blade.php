@@ -1,6 +1,13 @@
 @extends('layouts.admin-layout')
 @section('content')
 
+<style>
+    .upper {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+
 <div class="row admin-main">
     <div class="col s3">
         @include('layouts.admin-sidenav')
@@ -12,18 +19,19 @@
 
             </div>
         </div>
-        <!-- <div class="row create-event-btn">
-            <div class="container">
-                <a href="{{ route('events.create') }}" class="waves-effect waves-light btn"><i class="material-icons">add</i>Create Event</a>
-            </div>
-
-            <br>
-            
-            <div class="divider"></div>
-        </div> -->
-
+ 
+        
         <div class="row">
             <div class="container">
+                
+                <div class="upper">
+                    @if(session()->get('success'))
+                        <div class="msg green-text">
+                            {{ session()->get('success') }}
+                        </div>
+                    @endif
+                </div>
+
                <div class="card hoverable upper">
                     <div class="card-content">
                         <div class="card-title"> Create Event</div>

@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-/*use App\Event;
-use App\Post;*/
+use App\Event;
+use App\Post;
 use View;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-       /* View::share('posts', Post::all());
-        View::share('events', Event::all());*/
+        View::share('posts', Post::all());
+        View::share('events', Event::all());
     }
 }

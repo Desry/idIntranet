@@ -61,6 +61,13 @@
     });
 
     $(document).ready(function(){
+        $('.modal').modal();
+    });
+    $(document).ready(function(){
+        $('.materialboxed').materialbox();
+    });
+
+    $(document).ready(function(){
 
         $('#calendar').fullCalendar({
          

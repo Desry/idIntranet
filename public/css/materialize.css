@@ -6081,7 +6081,7 @@ body.keyboard-focused .dropdown-content li:focus {
   display: none;
   color: #fff;
   line-height: 50px;
-  bottom: 0;
+  bottom: 10%;
   left: 0;
   width: 100%;
   text-align: center;
@@ -6089,6 +6089,10 @@ body.keyboard-focused .dropdown-content li:focus {
   height: 50px;
   z-index: 1000;
   -webkit-font-smoothing: antialiased;
+  
+  /*modified by Desry*/
+  font-weight: bold;
+  font-size: 30px;
 }
 
 select:focus {

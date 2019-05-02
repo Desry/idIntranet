@@ -9,14 +9,14 @@
             <a href="#email"><span class="white-text email">admin@gmail.com</span></a>
         </div>
     </li>
-    <li>
+    <!-- <li>
         <a href="#!" class="admin-menu"><i class="admin-icons material-icons">person</i>Profile</a>
+    </li> -->
+    <li>
+        <a href="{{ route('events.index')}}" class="admin-menu"><i class="admin-icons material-icons">event</i>Events</a>
     </li>
     <li>
         <a href="{{ route('posts.index') }}" class="admin-menu"><i class="admin-icons material-icons">announcement</i>Announcements</a>
-    </li>
-    <li>
-        <a href="{{ route('events.index')}}" class="admin-menu"><i class="admin-icons material-icons">event</i>Events</a>
     </li>
     <li>
         <a href="#!" class="admin-menu"><i class="admin-icons material-icons">insert_drive_file</i>Files</a>

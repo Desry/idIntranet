@@ -20,32 +20,45 @@
             </div>
         </div>
 
-		<div class="card upper">
-			<div class="card-title">Update Post</div>
-			<div class="card-content">
-				@if($errors->any())
-				<div class="msg green-text">
-					@foreach($errors->all() as $error)
-						<ul>
-							<li>{{ $error }}</li>
-						</ul>
-					@endforeach
-				</div>
-				@endif
-				<form method="post" action="{{ route('posts.update', $post->id) }}" enctype="multipart/form-data">
-                    @method('PATCH')
-					@csrf
-					<div class="input-field col s6">
-          				<input id="title" type="text" class="validate" name="title" value="{{ $post->title }}">
-          				<label for="title">Title</label>
-        			</div>
-        			<div class="input-field col s6">
-                        <textarea id="content" class="materialize-textarea validate" type="text" class="validate" name="content" value="{{ $post->content }}"></textarea>
-                        <label for="content">Content</label>
-        			</div>
-        			<button type="submit" class="btn-floating waves-effect waves-light btn blue"><i class="material-icons">send</i>Submit</button>
-        		</form>
-        	</div>
+        <div class="row">
+            <div class="container">
+                <a href="/posts" class="btn waves-effect waves-light btn-green">Back</a>
+                <div class="card upper">
+                    <div class="card-content">
+                        <div class="card-title">Update Post</div>
+                        <br><br>
+
+                        @if($errors->any())
+                            <div class="msg green-text">
+                                @foreach($errors->all() as $error)
+                                    <ul>
+                                        <li>{{ $error }}</li>
+                                    </ul>
+                                @endforeach
+                            </div>
+                        @endif
+                
+                        <form method="post" action="{{ route('posts.update', $post->id) }}" enctype="multipart/form-data">
+                            @method('PATCH')
+                            @csrf
+                            <div class="input-field col s6">
+                                <input id="title" type="text" class="validate" name="title" value="{{ $post->title }}">
+                                <label for="title">Title</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <textarea id="content" class="materialize-textarea" type="text" class="validate" name="content">{{ $post->content }}</textarea>
+                                <label for="content">Content</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="img_path" type="file" name="img_path">
+                                <img src="{{ URL::to('/') }}/uploads/{{$post->img_path }}" height="100" width="100">
+                                <input type="hidden" name="hidden_image" value="{{ $post->img_path }}">
+                            </div>
+                            <button type="submit" class="btn-floating waves-effect waves-light btn blue"><i class="material-icons">send</i>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

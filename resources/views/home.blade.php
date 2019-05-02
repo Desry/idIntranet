@@ -14,9 +14,9 @@
                     <a href="#email"><span class="white-text email">admin@gmail.com</span></a>
                 </div>
             </li>
-            <li>
+           <!--  <li>
                 <a href="{{ route('home') }}" class="admin-menu"><i class="admin-icons material-icons">person</i>Profile</a>
-            </li>
+            </li> -->
             <li>
                 <a href="{{ route('posts.index') }}" class="admin-menu"><i class="admin-icons material-icons">announcement</i>Announcements</a>
             </li>
@@ -43,7 +43,7 @@
         </ul>
     </div>
 
-
+<!-- 
     <div class="col s9">
         <div class="row">
             <div class="col s2 right">
@@ -55,7 +55,7 @@
           <h6>Admin Content</h6>
 
         </div>
-    </div>
+    </div> -->
 </div>
 </div>
 

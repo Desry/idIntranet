@@ -28,7 +28,6 @@
 
 </head>
 <body>
-    
     @yield('content')
     
 
@@ -67,7 +66,21 @@
     $(document).ready(function(){
         $('.timepicker').timepicker();
     });
-       
+
+    $(document).ready(function(){
+        $('div.msg').fadeOut(2000);
+    });
+
+    $(".delete").on('submit', function(){
+        return confirm("Delete post?");
+    });
+
+    /*$(document).ready(function(){
+        setTimeout(function(){
+            $('div.msg').remove();
+        }, 3000);
+    });*/
+
     $(document).ready(function(){
         $('#calendarAdmin').fullCalendar({
             header: {
