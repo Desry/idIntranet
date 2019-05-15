@@ -1,8 +1,6 @@
 @extends('layouts.layout')
-
 @section('content')
 
-    
 
     <div id='announcements-header'>
         <h5 class="center-align">Announcements</h5>
@@ -42,9 +40,6 @@
     @endforeach
     <br><br>
 
-
    
 @include('layouts.footer')
-
 @endsection
-

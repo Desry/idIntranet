@@ -40,13 +40,21 @@ class EventsController extends Controller
         $request->validate([
             'event_name',
             'description',
-            'event_date'
+            'event_sdate',
+            'event_stime',
+            'event_edate',
+            'event_etime',
+            'event_color'
         ]);
 
         $form_data = array(
             'event_name' => $request->event_name,
             'description' => $request->description,
-            'event_date' => $request->event_date
+            'event_sdate' => $request->event_sdate,
+            'event_stime' => $request->event_stime,
+            'event_edate' => $request->event_edate,
+            'event_etime' => $request->event_etime,
+            'event_color' => $request->event_color
         );
 
         Event::create($form_data);
@@ -107,14 +115,22 @@ class EventsController extends Controller
         $request->validate([
             'event_name',
             'description',
-            'event_date'
+            'event_sdate',
+            'event_stime',
+            'event_edate',
+            'event_etime',
+            'event_color'
         ]);
 
 
         $event = Event::find($id);
         $event->event_name = $request->get('event_name');
         $event->description = $request->get('description');
-        $event->event_date = $request->get('event_date');
+        $event->event_sdate = $request->get('event_sdate');
+        $event->event_stime = $request->get('event_stime');
+        $event->event_edate = $request->get('event_edate');
+        $event->event_etime = $request->get('event_etime');
+        $event->event_color = $request->get('event_color');
 
 
         $event->save();

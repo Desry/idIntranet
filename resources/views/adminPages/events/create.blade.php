@@ -39,19 +39,25 @@
                                     <label for="description">Event Description</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input type="text" class="datepicker" name="event_date">
-                                    <label for="event_date">Event Date</label>
+                                    <input type="text" class="datepicker" name="event_sdate">
+                                    <label for="event_sdate">Start Date</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input type="text" name="event_stime" class="timepicker">
+                                    <label for="event_stime">Start Time</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input type="text" name="event_edate" class="datepicker">
+                                    <label for="event_edate">End Date</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input type="text" name="event_etime" class="timepicker">
+                                    <label for="event_etime">End Time</label>
                                 </div>
                                 <div class="input-field col s6">
                                     <input type="text" name="event_color">
                                     <label for="event_color">Event Color</label>
                                 </div>
-
-
-                               <!--  <div class="input-field col s6">
-                                    <input type="text" class="timepicker">
-                                    <label for="event_time">Event Time</label>
-                                </div> -->
                     
                                 <button type="submit" class="btn-floating waves-effect waves-light btn blue"><i class="material-icons">send</i>Submit</button>
 

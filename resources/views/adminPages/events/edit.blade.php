@@ -52,8 +52,20 @@
                                 <label for="description">Event Description</label>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" class="datepicker" name="event_date" placeholder="Event date" value="{{ $event->event_date }}">
-                                <label for="event_date">Event Date</label>
+                                <input type="text" class="datepicker" name="event_date" placeholder="Start date" value="{{ $event->event_sdate }}">
+                                <label for="event_sdate">Start Date</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" class="timepicker" name="event_stime" placeholder="Start time" value="{{ $event->event_stime }}">
+                                <label for="event_stime">Start Time</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" class="datepicker" name="event_edate" placeholder="End date" value="{{ $event->event_edate }}">
+                                <label for="event_edate">End Date</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" class="timepicker" name="event_etime" placeholder="End time" value="{{ $event->event_etime }}">
+                                <label for="event_etime">End Time</label>
                             </div>
                             <button type="submit" class="btn-floating waves-effect waves-light btn blue"><i class="material-icons">send</i>Submit</button>
                         </form>

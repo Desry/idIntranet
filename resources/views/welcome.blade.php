@@ -9,13 +9,23 @@
             </div>
         </div>
         
-
         <div class="row">
             <div class="col s12 m12">
                 <div class="carousel carousel-slider center">
-                    <div class="carousel-item red white-text" href="#one!">
-                        <h2>All-New ScheduleIn 3.0</h2>
-                        <p class="white-text">InfiniteDATA will release the third version of its WLA software...</p>
+                    @foreach($posts->take(5) as $post)
+                        <!-- <div class="carousel-item" href="#one!">
+                            <img src="{{ URL::to('/') }}/uploads/{{ $post->img_path }}">
+                        </div> -->
+                        <div class="carousel-item red white-text" href="#one!">
+                            <h2>{{ $post->title }}</h2>
+                            <p>{{ str_limit($post->content, 100, '...') }}</p>
+                        </div>
+                    @endforeach
+                    <!-- <div class="carousel-item red white-text" href="#one!">
+                        @foreach($posts->take(5) as $post)
+                            <h2>{{ $post->title }}</h2>
+                            <p class="white-text">{{ $post->content }}</p>
+                        @endforeach
                     </div>
                     <a class="carousel-item" href="#one!"><img src="images/istock-492539318-2000x1421.jpg"></a>
                     <div class="carousel-item amber white-text" href="#two!">
@@ -29,10 +39,24 @@
                     <div class="carousel-item blue white-text" href="#four!">
                         <h2>Fourth Panel</h2>
                         <p class="white-text">This is your fourth panel</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
+
+        <!-- modal to show Announcement details -->
+        <div class="modal" id="showPost">
+            <div class="modal-content">
+                <h4>{{ $post->title }}</h4>
+                <img src="{{ URL::to('/') }}/uploads/{{ $post->img_path }}" width="100" height="100">
+                <p>{{ $post->content }}</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+
+
         <div class="row">
             <div class="col s12 m6">
                 <div class="card blue darken-4">
@@ -43,7 +67,8 @@
                             @foreach($posts->take(5) as $post)
                                 <li class="collection-item avatar">
                                     <img src="{{ URL::to('/') }}/uploads/{{ $post->img_path }}" alt="" class="circle">
-                                    <span class="title">{{ $post->title }}</span>
+                                    <span><a href="#showPost" class="modal-trigger">{{ $post->title }}</a></span>
+                                    <!-- <span class="title">{{ $post->title }}</span> -->
                                     <p>{{ $post->updated_at }}</p>
                                 </li>
                             @endforeach
@@ -56,7 +81,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="col s12 m6">
                 <div class="card green darken-4">
@@ -94,13 +118,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
 
-
 @include('layouts.footer')
-
 
 @endsection

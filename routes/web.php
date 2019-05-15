@@ -24,6 +24,10 @@ Route::get('/directory', function () {
     return view('directories', $params);
 });
 
+/*Route::get('/directory', function() {
+	return view('directories');
+});
+*/
 
 //disable user registration
 Auth::routes(['register' => false]);

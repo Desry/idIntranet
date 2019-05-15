@@ -1,4 +1,4 @@
-<style>
+kk<style>
 	.icon_style {
 		position: absolute;
 		right: 10px;
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="col s12 m2">
-        <i class="fa fa-times icon_style" id="alert_close" aria-hidden="true"></i>
+      	<i class="fa fa-times icon_style" id="alert_close" aria-hidden="true"></i>
       </div>
     </div>
    </div>

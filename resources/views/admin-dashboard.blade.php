@@ -48,13 +48,11 @@
         <div class="row">
             <div class="col s2 right">
                 <img class="responsive-img right" id="id_logo" src="images/infinitedata_logo.jpg">
-
             </div>
         </div>
         
         <div class="row">
-          <h6>Admin Content</h6>
-
+            <h6>Admin Content</h6>
         </div>
     </div>
 </div>

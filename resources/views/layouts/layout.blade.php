@@ -79,12 +79,13 @@
             //theme: true,
             navLinks: true, //can click day/week names to navigate views
             businessHours: true,
-            showNonCurrentDates: false,            
+            showNonCurrentDates: false,   
+            nextDayThreshold: '00:00:00',   
+            eventLimit: true, // when too many events in a day, show the popover
+      
 
-            eventClick: function(eventObj) {
-
-                var formDate = $.fullCalendar.formatDate(eventObj.start, 'Mon-DD-YYYY');
-                
+            /*eventClick: function(eventObj) {
+                //var formDate = $.fullCalendar.formatDate(eventObj.start, 'Mon-DD-YYYY');
                 if (eventObj.url) {
                     alert(
                         eventObj.title + '.\n' +
@@ -94,18 +95,19 @@
                     window.open(eventObj.url);
                     return false; // prevents browser from following link in current tab.
                 } else {
-
-                    alert(eventObj.title + '\n' + eventObj.formDate);
+                    alert(eventObj.title + '\n' + eventObj.start + '\n' + eventObj.end);
+                    alert(eventObj.start);
                 }
-            },
-            eventLimit: true, // when too many events in a day, show the popover
+            },*/
+
 
             events: [
                @foreach($events as $event)
                {
                     title: '{{ $event->event_name }}',
-                    start: '{{ $event->event_date }}',
-                    eventColor: '{{ $event->event_color }}'
+                    start: '{{ date('Y-m-d H:i:s', strtotime("$event->event_sdate $event->event_stime")) }}',
+                    end: '{{ date('Y-m-d H:i:s', strtotime("$event->event_edate $event->event_etime")) }}',  
+                    color: '{{ $event->event_color }}'
 
                },
                @endforeach

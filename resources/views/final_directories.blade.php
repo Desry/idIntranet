@@ -67,8 +67,7 @@
                 </div>
             </div>
         </li>
-
-         <li>
+        <li>
             <div class="collapsible-header"><i class="material-icons right">people</i>Customer Success
             </div>
             <div class="collapsible-body">

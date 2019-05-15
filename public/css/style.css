@@ -184,3 +184,35 @@ h5 {
   font-weight: lighter;
   font-style: italic;
 }
+
+
+.colorpicker-2x .colorpicker-saturation {
+    width: 200px;
+    height: 200px;
+  }
+  .colorpicker-2x .colorpicker-hue,
+  .colorpicker-2x .colorpicker-alpha {
+    width: 30px;
+    height: 200px;
+  }
+  .colorpicker-2x .colorpicker-color,
+  .colorpicker-2x .colorpicker-color div{
+    height: 30px;
+  }
+
+/*
+.removeBtn {
+  color:black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width:13px;
+  height: 13px;
+  text-align:center;
+  border-radius:50%;
+  font-size: 10px;
+  cursor: pointer;
+  background-color: #FFF
+}
+*/
+
