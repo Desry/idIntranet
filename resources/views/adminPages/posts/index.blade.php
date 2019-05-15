@@ -45,6 +45,7 @@
                 <thead>
                     <tr>
                         <td>Post</td>
+                        <td>View</td>
                         <td>Delete</td>
                     </tr>
                 </thead>
@@ -54,6 +55,10 @@
                             <br>
                             <td><a href="{{ route('posts.edit', $post->id) }}">{{ $post->title }}</a></td>
                             <td>
+                                <!-- <a href="{{ route('posts.show', $post->id) }}" onclick="viewPost()" class="btn-floating waves-effect waves-light btn green"><i class="material-icons">pageview</i></a> -->
+                                <button id="postBtn" onclick="viewPost()" class="btn-floating waves-effect waves-light btn green"><i class="material-icons">pageview</i></button>
+                            </td>
+                            <td>
                                 <form method="post" action="{{ route('posts.destroy', $post->id) }}" class="delete">
                                     @csrf
                                     @method('DELETE')
@@ -61,6 +66,17 @@
                                 </form>
                             </td>
                         </tr>
+
+                        <div class="modal" id="viewPost">
+                            <div class="modal-content">
+                                <h3>Title</h3>
+                                <p>Test modal</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" onclick="Custombox.modal.close()" class="waves-effect waves-light blue white-text btn-flat">Close</a>
+                            </div>
+                        </div>
+
                     @endforeach
                 </tbody>
             </table>

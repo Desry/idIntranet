@@ -80,32 +80,36 @@
             $('.modal').modal();
         });
 
+        /* test modal using custombox jQuery plugin*/
 
-        /*$(document).ready(function(){
-            setTimeout(function(){
-                $('div.msg').remove();
-            }, 3000);
-        });*/
-
-
-     /*   $('#test').on('click', function () {
-            $.fn.custombox( this, {
-                overlay: false,
-                effect: 'fadein',
-                target: 'showDetails'
-            });
-            return false;
-        });*/
-
-        $('#test').on('click', function() {
-            var show = new Custombox.modal({
-                content: {
-                    effect: 'fadein',
-                    target: 'showDetails'
-                }
-            });
+        function openModal() {
+             $('#test').on('click', function() {
+                var show = new Custombox.modal({
+                    content: {
+                        effect: 'slip',
+                        target: '#showDetails'
+                    }
+                });
             show.open();
-        });
+            });
+        }
+
+        /*triggers the view modal for posts*/
+
+        function viewPost() {
+            $('#postBtn').on('click', function(){
+                var show = new Custombox.modal({
+                    @foreach($posts as $post)
+                        content: {
+                            effect: 'slip',
+                            target: '#viewPost'
+                        }
+                    @endforeach
+                });
+                show.open();
+            });
+        }
+       
 
         $(document).ready(function(){
             $('#calendarAdmin').fullCalendar({
@@ -151,7 +155,7 @@
                     });
                     e.preventDefault();
                 },
-*/
+                */
 
                 //droppable: true,
                 editable: true,

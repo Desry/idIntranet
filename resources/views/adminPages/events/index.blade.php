@@ -22,7 +22,7 @@
  
         <!-- button trigger for showDetails modal -->
 
-        <button id="test" data-target="showDetails" class="btn modal-trigger">Test</button>
+        <button id="test" onclick="openModal()" class="btn">Test</button>
 
         <div class="row">
             <div class="container">
@@ -91,7 +91,7 @@
                 <p>Test modal</p>
             </div>
             <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                <a href="#!" onclick="Custombox.modal.close()" class="waves-effect waves-light blue white-text btn-flat">Close</a>
             </div>
         </div>
 
